@@ -2,15 +2,15 @@
 import { useState } from 'react'
 import './App.css'
 //Importacion de componentes
-
-import ExampleHookThree from './components/ExampleHookThree';
+import ExampleHookTwo from './components/ExampleHookTwo';
 function App() {
   
 
   return (
     //<> Contenedores influyen en el diseno y son con la etiqueta <>
     <>
-    <ExampleHookThree></ExampleHookThree>
+      
+      <ExampleHookThree></ExampleHookThree>
     </>
   )
 }

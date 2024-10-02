@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import './App.css'
 //Importacion de componentes
-
+import ExampleHookTwo from './components/ExampleHookTwo';
 import ExampleHookThree from './components/ExampleHookThree';
 function App() {
   
