@@ -10,7 +10,7 @@ function App() {
   return (
     //<> Contenedores influyen en el diseno y son con la etiqueta <>
     <>
-    <AtmosphericConditions></AtmosphericConditions>
+    <AtmosphericCondition></AtmosphericCondition>
     </>
   )
 }

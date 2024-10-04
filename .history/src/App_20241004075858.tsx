@@ -3,14 +3,14 @@ import { useState } from 'react'
 import './App.css'
 //Importacion de componentes
 
-import AtmosphericConditions from './components/AtmosphericConditions';
+import At from './components/ExampleHookThree';
 function App() {
   
 
   return (
     //<> Contenedores influyen en el diseno y son con la etiqueta <>
     <>
-    <AtmosphericConditions></AtmosphericConditions>
+    <AtmosphericCondition></AtmosphericCondition>
     </>
   )
 }
