@@ -1,10 +1,8 @@
-//Importacion de los hooks
+
 import { useState, useEffect } from "react";
-//Definicion del componente
+
 function AtmosphericConditions() {
-//URL de la API
     const url = "https://api.datos.gob.mx/v1/condiciones-atmosfericas";
-//Lista de los estados de MX
     const mxStates = [
         {
             "id": 1,
@@ -135,14 +133,11 @@ function AtmosphericConditions() {
             "name": "Zacatecas"
         }
     ];
-    //data: almacena los resultados de la API mediante un array vacio
-    //seeData hace una solicitud a la API, y convierte la respuesta a un objeto JSON
+    
     const [data, setData] = useState([]);
-    //actualState almacena el resultado seleccionado en el menu
     const [actualState, setActualState] = useState();
     const seeData = () => {
         return fetch(url)
-        //Consume la API y lo convierte a un objeto JSON
             .then((res) => res.json())
             .then((atmCondition) => setData(atmCondition.results))
     }

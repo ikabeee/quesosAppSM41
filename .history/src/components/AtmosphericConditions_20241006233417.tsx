@@ -142,7 +142,7 @@ function AtmosphericConditions() {
     const [actualState, setActualState] = useState();
     const seeData = () => {
         return fetch(url)
-        //Consume la API y lo convierte a un objeto JSON
+        //
             .then((res) => res.json())
             .then((atmCondition) => setData(atmCondition.results))
     }

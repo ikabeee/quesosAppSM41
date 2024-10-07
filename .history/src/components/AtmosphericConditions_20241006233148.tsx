@@ -135,14 +135,11 @@ function AtmosphericConditions() {
             "name": "Zacatecas"
         }
     ];
-    //data: almacena los resultados de la API mediante un array vacio
-    //seeData hace una solicitud a la API, y convierte la respuesta a un objeto JSON
+    //
     const [data, setData] = useState([]);
-    //actualState almacena el resultado seleccionado en el menu
     const [actualState, setActualState] = useState();
     const seeData = () => {
         return fetch(url)
-        //Consume la API y lo convierte a un objeto JSON
             .then((res) => res.json())
             .then((atmCondition) => setData(atmCondition.results))
     }
