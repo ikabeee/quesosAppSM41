@@ -139,7 +139,7 @@ function AtmosphericConditions() {
     //seeData hace una solicitud a la API, y convierte la respuesta a un objeto JSON
     const [data, setData] = useState([]);
     //actualState almacena el resultado seleccionado en el menu
-    const [actualState, setActualState] = useState("");
+    const [actualState, setActualState] = useState();
     const seeData = () => {
         return fetch(url)
         //Consume la API y lo convierte a un objeto JSON
@@ -150,7 +150,9 @@ function AtmosphericConditions() {
         seeData();
         console.log(seeData)
     }, []);
-    const filterCities = data.filter((city) => city.state == actualState)
+    const filterCities = (data.filter(city)) => {
+        if (city.state ==  ) 
+    }
     return (
         <>
             <select
@@ -165,7 +167,7 @@ function AtmosphericConditions() {
             </select>
             {actualState}
             <h1>Estado del tiempo</h1>
-            {filterCities.map((city, index) => {
+            {data.map((city, index) => {
                 return (
                     <div>
                         <p>{city.name} - <i>{city.skydescriptionlong}</i></p>
