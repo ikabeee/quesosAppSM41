@@ -9,7 +9,7 @@ function ExampleMap() {
     const universities=[
         {name: "UTC", coordinates:[-86.84683796931176, 21.049777035290912], color:"green"},
         {name: "UPQROO", coordinates:[-86.84683796931176, 21.181196065120016], color: "red"}]
-
+        
     useEffect(() => {
         mapboxgl.accessToken = "pk.eyJ1IjoiY2FybGdsem0iLCJhIjoiY20yOTFpcWgwMDBrbjJyb215dGcyeXBiZCJ9.LEj7ngvmN67Oi3vasyB_SA"
         if (mapContainer.current) {
@@ -44,7 +44,7 @@ function ExampleMap() {
                 myMap.current.remove();
             }
         }
-    }, [])
+    }, [coordinates])
 
 
     return (

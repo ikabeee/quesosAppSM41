@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 import ExampleMap from './components/ExampleMap';
 function App() {
+  
 
   return (
     //<> Contenedores influyen en el diseno y son con la etiqueta <>
