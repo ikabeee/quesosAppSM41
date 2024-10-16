@@ -26,7 +26,6 @@ function ExampleMap() {
                 new mapboxgl.Marker({color: university.color})
                     .setLngLat(university.coordinates)
                     .addTo(myMap.current)
-                    //Arreglar popup
                     .setPopup(new mapboxgl.Popup().setHTML(`<h6>${university.name}</h6>`))
             })
 

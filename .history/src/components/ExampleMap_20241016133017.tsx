@@ -23,12 +23,16 @@ function ExampleMap() {
             });
 
             universities.forEach(university=>{
-                new mapboxgl.Marker({color: university.color})
+                new mapboxgl.Marker({color: '#FF0000'})
                     .setLngLat(university.coordinates)
                     .addTo(myMap.current)
-                    //Arreglar popup
-                    .setPopup(new mapboxgl.Popup().setHTML(`<h6>${university.name}</h6>`))
             })
+            //Tecnologico de Cancun
+            new mapboxgl.Marker({
+                color: '#FF0000'
+            })
+                .setLngLat([ -86.83569087672059, 21.139175592642935,])
+                .addTo(myMap.current);
 
             //Metodo para obtener las coordenas de una ubicacion
             myMap.current.on("click", (e) => {

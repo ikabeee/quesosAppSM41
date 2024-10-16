@@ -23,11 +23,10 @@ function ExampleMap() {
             });
 
             universities.forEach(university=>{
-                new mapboxgl.Marker({color: university.color})
+                new mapboxgl.Marker({color: universi})
                     .setLngLat(university.coordinates)
                     .addTo(myMap.current)
-                    //Arreglar popup
-                    .setPopup(new mapboxgl.Popup().setHTML(`<h6>${university.name}</h6>`))
+
             })
 
             //Metodo para obtener las coordenas de una ubicacion

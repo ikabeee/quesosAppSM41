@@ -7,8 +7,8 @@ function ExampleMap() {
     const mapContainer = useRef<HTMLDivElement | null>(null)
     const myMap = useRef<Map | null>(null)
     const universities=[
-        {name: "UTC", coordinates:[-86.84683796931176, 21.049777035290912], color:"green"},
-        {name: "UPQROO", coordinates:[-86.84683796931176, 21.181196065120016], color: "red"}]
+        {name: "UTC", coordinates:[-86.84683796931176, 21.049777035290912]},
+        {name: "UPQROO", coordinates:[-86.84683796931176, 21.181196065120016]}]
     useEffect(() => {
         mapboxgl.accessToken = "pk.eyJ1IjoiY2FybGdsem0iLCJhIjoiY20yOTFpcWgwMDBrbjJyb215dGcyeXBiZCJ9.LEj7ngvmN67Oi3vasyB_SA"
         if (mapContainer.current) {
@@ -22,13 +22,17 @@ function ExampleMap() {
                 zoom: 15
             });
 
-            universities.forEach(university=>{
-                new mapboxgl.Marker({color: university.color})
-                    .setLngLat(university.coordinates)
+            universities.forEach(()=>{
+                new mapboxgl.Marker({color: '#FF0000'})
+                    .setLngLat(universities.coordinates)
                     .addTo(myMap.current)
-                    //Arreglar popup
-                    .setPopup(new mapboxgl.Popup().setHTML(`<h6>${university.name}</h6>`))
             })
+            //Tecnologico de Cancun
+            new mapboxgl.Marker({
+                color: '#FF0000'
+            })
+                .setLngLat([ -86.83569087672059, 21.139175592642935,])
+                .addTo(myMap.current);
 
             //Metodo para obtener las coordenas de una ubicacion
             myMap.current.on("click", (e) => {
